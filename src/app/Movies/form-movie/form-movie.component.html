@@ -1,0 +1,57 @@
+<form (submit)="saveChangesForm()" [formGroup]="form" *ngIf="form">
+
+    <div class="form-group">
+        <label class="text-primary" for="moviename">Movie Name</label>
+        <input class="form-control form-control-lg" type="text" formControlName="name" placeholder="Movie name here...">
+        <small id="error" class="text-danger form-text text-muted">{{GetErrorMessageFieldName()}}</small>
+    </div>
+
+    <br>
+
+    <div class="form-group">
+        <label class="text-primary" for="movieyear">Year</label>
+        <input class="form-control form-control-lg" type="text" formControlName="year" placeholder="Movie released year here...">
+        <small id="error" class="text-danger form-text text-muted">{{GetErrorMessageFieldYear()}}</small>
+    </div> &nbsp;
+
+    <div class="form-group">
+        <label class="text-primary" for="moviegenre">Genre</label>
+        <select title="genre" formControlName="genre" class="form-control form-control-lg" placeholder="Select movie genre">
+            <option *ngFor="let genre of genre" [value]="genre.name">
+                {{genre.name}}
+              </option>
+          </select>
+        <small id="error" class="text-danger form-text text-muted">{{GetErrorMessageFieldGenre()}}</small>
+    </div>
+
+    <br>
+
+    <div class="form-group">
+        <label class="text-primary" for="movieposterlink">Poster Link</label>
+        <input class="form-control form-control-lg" type="text" formControlName="poster_link" placeholder="Copy & paste movie poster URL here...">
+        <small id="error" class="text-danger form-text text-muted">{{GetErrorMessageFieldPosterLink()}}</small>
+    </div>
+
+    <br>
+
+    <div class="form-group">
+        <label class="text-primary" for="movieteaserlink">Teaser Link</label>
+        <input class="form-control form-control-lg" type="text" formControlName="teaser_link" placeholder="Copy & paste movie teaser URL here...">
+        <small id="error" class="text-danger form-text text-muted">{{GetErrorMessageFieldTeaserLink()}}</small>
+    </div>
+
+    <br>
+
+    <div class="form-group">
+        <label class="text-primary" for="movieteaserlink">Description</label>
+        <textarea class="form-control form-control-lg" type="text" formControlName="description" placeholder="Movie description here..."></textarea>
+        <small id="error" class="text-danger form-text text-muted">{{GetErrorMessageFieldDescription()}}</small>
+    </div>
+
+    <div>
+        <br>
+        <button type="submit" mat-flat-button color="primary" *ngIf="form.valid">Save</button> &nbsp;
+        <a type="button" mat-stroked-button color="warn" (click)="help()" *ngIf="form.invalid">Get Help ?</a> &nbsp;
+        <button type="button" mat-stroked-button color="warn" routerLink="/movie" (click)="clear()">Cancel</button>
+    </div>
+</form>

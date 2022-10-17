@@ -1,0 +1,9 @@
+<mat-toolbar color="primary">
+    <span align="center"><button type="button" mat-button routerLink="/movie"><mat-icon>movie</mat-icon> &nbsp; Movie</button></span>
+    <span align="right" class="right-content">
+        <span align="right" class="">Welcome! {{getcurrentDirector()}}</span>&nbsp; &nbsp;
+        <span><mat-icon>light_mode</mat-icon><app-dark-mode-toggle></app-dark-mode-toggle><mat-icon>dark_mode</mat-icon></span> &nbsp;
+        <span align="right" class="today">{{Today}}</span>&nbsp;
+        <span><button type="button" mat-button (click)="SignOut()"><mat-icon>logout</mat-icon> &nbsp; Logout</button></span>
+    </span>
+</mat-toolbar>

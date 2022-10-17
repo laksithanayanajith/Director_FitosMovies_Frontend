@@ -1,0 +1,20 @@
+<body>
+    <div *ngIf="viewmovie.length > 0">
+        <div *ngFor="let movie of viewmovie">
+            <mat-grid-list cols="2" rowHeight="5:1">
+                <mat-grid-tile>
+                    <div><img [src]="movie.poster_link" alt="" height="500px" width="350px"></div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <div>
+                        {{movie.name}}
+                    </div>
+                </mat-grid-tile>
+            </mat-grid-list>
+            </div>
+        </div>
+</body>
+
+
+
+

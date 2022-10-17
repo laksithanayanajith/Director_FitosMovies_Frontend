@@ -1,0 +1,43 @@
+.bg{
+    background-image: url('../images/gordon-cowie-rLjReGYvjZ0-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(150, 65, 65, 0.9);
+    height: 98.33%;
+    width: 100%;
+}
+
+.center{
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    height: 500px;
+    width: 1750px;
+    background-color: rgb(150, 65, 65, 0.4);
+}
+
+.letters{
+    font-size:100px;
+    font: optional;
+    font-display: inherit;
+    color: aliceblue;
+}
+
+.sub-letters{
+    font-size:25px;
+    font: optional;
+    font-display: inherit;
+    color: aqua;
+}
+
+.get-start{
+    border: none;
+    color: white;
+    padding: 12px 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }

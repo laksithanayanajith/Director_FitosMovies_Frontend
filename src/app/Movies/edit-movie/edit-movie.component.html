@@ -1,0 +1,10 @@
+<div class="container" data-aos="fade-right">
+
+    <h2>Update movie</h2>
+
+    <div class="container">
+        <app-form-movie *ngIf="model" [model]="model" (onSaveChanges)="saveChanges($event)"></app-form-movie>
+        <mat-spinner *ngIf="!model"></mat-spinner>
+    </div>
+
+</div>

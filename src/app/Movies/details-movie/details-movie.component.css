@@ -1,0 +1,19 @@
+#movie-teaser{
+    width: 100%;
+    position: relative;
+}
+
+.teaser{
+    width: 100%;
+    height: 500px;
+
+}
+
+.about{
+    width: 80%;
+    background-color: yellow;
+    height: 300px;
+    position: absolute;
+    top: 450px;
+    left: 10%;
+}
